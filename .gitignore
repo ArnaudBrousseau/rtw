@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# swp files (Vim)
+*.sw[a-z]
+
 # Distribution / packaging
 .Python
 env/

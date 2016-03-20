@@ -6,7 +6,6 @@ pyOpenSSL==0.13
 python-dateutil==1.5
 pytz===2012d
 RtmAPI==0.6.0
-scipy==0.11.0
 Twisted==12.2.0
 virtualenv==15.0.1
 whitenoise==2.0.6

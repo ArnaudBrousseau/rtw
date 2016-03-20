@@ -23,6 +23,7 @@ lib64/
 parts/
 sdist/
 var/
+virtualenv_run/
 *.egg-info/
 .installed.cfg
 *.egg

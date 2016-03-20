@@ -12,8 +12,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Application definition
 
-SECRET_KEY='hi'
-DEBUG = True
+SECRET_KEY = os.environ.get('SECRET_KEY_GUNICORN', 'dev_gunicorn_secret')
+DEBUG = bool(os.environ.get('DEBUG', 1))
 
 INSTALLED_APPS = (
     'django.contrib.contenttypes',

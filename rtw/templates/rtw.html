@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="flex-container flex-container-main start">
+        <div class="flex-item secondary">
+            <a href="javascript:;">Tap To Start</a>
+        </div>
+    </div>
+
+    <div class="flex-container flex-container-main flashcard hidden">
+        <div class="flex-item primary">
+            <a href="javascript:;"></a>
+        </div>
+        <div class="flex-item secondary">
+            <a class="reveal" href="javascript:;">Reveal definition</a>
+            <a class="definition hidden" href="javascript:;"></a>
+        </div>
+    </div>
+
+    <div class="flex-container flex-container-main quote hidden">
+        <div class="flex-item secondary">
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+        window.RTWData = {{ rtw_data|safe }};
+    </script>
+    <script src="{% static 'js/rtw.js'%}"></script>
+{% endblock %}

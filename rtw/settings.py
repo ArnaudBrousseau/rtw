@@ -12,8 +12,12 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Application definition
 
-SECRET_KEY = os.environ.get('SECRET_KEY_GUNICORN', 'dev_gunicorn_secret')
-DEBUG = bool(os.environ.get('DEBUG', 1))
+SECRET_KEY = os.environ.get('SECRET_KEY_GUNICORN')
+DEBUG = bool(os.environ.get('DEBUG'))
+
+RTM_API_KEY = os.environ.get('RTM_API_KEY')
+RTM_API_SECRET = os.environ.get('RTM_API_SECRET')
+RTM_WORD_LIST_ID = '31054349'
 
 INSTALLED_APPS = (
     'django.contrib.contenttypes',

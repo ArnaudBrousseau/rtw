@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    background-color: #222
+    color: #FFF;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+a {
+    font-weight: 700;
+    color: white;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+.flex-container-main {
+    height: 100vh;
+}
+.flex-item {
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical alignment */
+    align-items: center; /* text centering */
+}
+
+.primary {
+    background-color: #8BEA00;
+}
+.secondary {
+    background-color: #D60062;
+}
+
+/********
+ * Colors
+ * Palette URL: http://paletton.com/#uid=72s0u0kw0w0jyC+oRxVy4oIDfjr
+ *******/
+.primary-shade-0 { color: #8BEA00; }
+.primary-shade-1 { color: #B4EF5D; }
+.primary-shade-2 { color: #A1EB35; }
+.primary-shade-3 { color: #6BB500; }
+.primary-shade-4 { color: #548E00; }
+
+.secondary-shade-0 { color: #00BD39; }
+.secondary-shade-1 { color: #50CD76; }
+.secondary-shade-2 { color: #2BC158; }
+.secondary-shade-3 { color: #00922C; }
+.secondary-shade-4 { color: #007223; }
+
+.secondary-alt-shade-0 { color: #FF2300; }
+.secondary-alt-shade-1 { color: #FF7863; }
+.secondary-alt-shade-2 { color: #FF5439; }
+.secondary-alt-shade-3 { color: #C51B00; }
+.secondary-alt-shade-4 { color: #9B1500; }
+
+.complement-shade-0 { color: #D60062; }
+.complement-shade-1 { color: #E15796; }
+.complement-shade-2 { color: #D9307D; }
+.complement-shade-3 { color: #A6004B; }
+.complement-shade-4 { color: #82003B; }

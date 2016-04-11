@@ -3,5 +3,13 @@
 
 {% block content %}
 
-      Hello Heroku
+<div class="flex-container flex-container-main">
+    <div class="flex-item primary">
+        <a href="{{auth_url}}" target="_blank">Authenticate with RememberTheMilk</a>
+    </div>
+    <div class="flex-item secondary">
+        <a href="/play?frob={{auth_frob}}">Start Playing</a>
+    </div>
+</div>
+
 {% endblock %}

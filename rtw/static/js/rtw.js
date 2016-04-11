@@ -5,6 +5,14 @@ $(function() {
         return items[Math.floor(Math.random()*items.length)];
     };
 
+    var adjustFontSize = function($elem) {
+        var length = $elem.text().length;
+        if (length < 30) { return; }
+        if (length > 30 && length < 80) { $elem.css('font-size', '3rem'); }
+        if (length > 80 && length < 200) { $elem.css('font-size', '2rem'); }
+        if (length > 200) { $elem.css('font-size', '1rem'); }
+    };
+
     var showFlashcard = function(card) {
         $flashcard = $(".flashcard");
         $flashcard.find(".primary a").text(card[0]);
@@ -20,6 +28,7 @@ $(function() {
         $quote.find("a").text(quote);
 
         $(".flashcard, .start").addClass("hidden");
+        adjustFontSize($quote.find("a"));
         $quote.removeClass("hidden");
     };
 
@@ -38,6 +47,7 @@ $(function() {
             e.stopPropagation();
             $(".reveal").addClass("hidden")
             $(".definition").removeClass("hidden");
+            adjustFontSize($(".definition"));
         } else {
             // let the even propagate up if
             // the definition is already revealed

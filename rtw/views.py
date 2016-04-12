@@ -33,11 +33,11 @@ def retrieve_words(request):
     quotes = []
     for tasklist in result.tasks:
         for taskseries in tasklist:
-            try:
-                word, definition = taskseries.name.split(':')
-                flashcards.append((word,definition))
-            except:
-                quotes.append(taskseries.name)
+            parts = taskseries.name.split(':')
+            if len(parts) == 1:
+                quotes.append(''.join(parts))
+            if len(parts) > 1:
+                flashcards.append((parts[0], ':'.join(parts[1:])))
     context = {
         "rtw_data": json.dumps({"flashcards": flashcards, "quotes": quotes}),
         "api_token": api.token,

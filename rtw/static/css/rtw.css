@@ -15,7 +15,9 @@ body {
 
 a {
     font-weight: 700;
-    color: white;
+    color: #fff;
+    text-decoration: none;
+    word-break: break-word;
 }
 
 .bold {

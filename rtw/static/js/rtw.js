@@ -32,12 +32,36 @@ $(function() {
         $quote.removeClass("hidden");
     };
 
-    var next = function() {
-        if (Math.random() > 0.5) {
-            showFlashcard(getRandomItem(data.flashcards));
-        } else {
-            showQuote(getRandomItem(data.quotes));
+    var deleteElementFromArray = function(element, array) {
+        var index = array.indexOf(element);
+        if (index > -1) {
+            array.splice(index, 1);
         }
+    };
+
+    var displayCard = function() {
+        var flashcard = getRandomItem(data.flashcards);
+        showFlashcard(flashcard);
+        deleteElementFromArray(flashcard, data.flashcards)
+    };
+
+    var displayQuote = function() {
+        var quote = getRandomItem(data.quotes);
+        showQuote(quote);
+        deleteElementFromArray(quote, data.quotes);
+    };
+
+    var next = function() {
+        var shouldDisplayCard = Math.random() * (data.flashcards.length + data.quotes.length) > data.flashcards.length;
+        var shouldDisplayQuote = !shouldDisplayCard;
+        var canDisplayCard = data.flashcards.length > 0;
+        var canDisplayQuote = data.quotes.length > 0;
+
+        if (canDisplayCard && shouldDisplayCard) { displayCard(); }
+        else if (canDisplayQuote && shouldDisplayQuote) { displayQuote(); }
+        else if (canDisplayCard && shouldDisplayQuote) { displayCard(); }
+        else if (canDisplayQuote && shouldDisplayCard) { displayQuote(); }
+        else { alert("It's over. You've gone through the entire list!"); }
     };
 
     $(".flex-container-main").click(next);
@@ -53,6 +77,4 @@ $(function() {
             // the definition is already revealed
         }
     });
-
-
 });

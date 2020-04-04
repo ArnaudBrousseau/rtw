@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
-import settings
+import rtw.settings as settings
 import sys
 import webbrowser
 from rtmapi import Rtm

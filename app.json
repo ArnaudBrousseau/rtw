@@ -1,6 +1,6 @@
 {
   "name": "RememberThatWord",
-  "description": "Simple Python App on top of RememberTheMilk to display memory-flash-cards to memorize vocabulary.", which can easily be deployed to Heroku.",
+  "description": "Simple Python App on top of RememberTheMilk to display memory-flash-cards to memorize vocabulary.",
   "image": "heroku/python",
   "repository": "https://github.com/arnaudbrousseau/rtw",
   "keywords": ["python", "django", "RememberTheMilk" ],
